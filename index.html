@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedido Interactivo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Construye tu pedido</h1>
+    <p>Arrastra los productos al área de pedido</p>
+  </header>
+
+  <main class="container">
+    <section class="products">
+      <h2>Productos disponibles</h2>
+      <div id="spinner"></div>
+      <div id="product-list" class="product-list"></div>
+    </section>
+
+    <section class="cart">
+      <h2>Tu pedido</h2>
+      <div class="dropzone">
+        <p>Arrastra aquí tus productos</p>
+      </div>
+
+      <ul id="cart-list" class="cart-list"></ul>
+
+      <div class="cart-summary">
+        <strong>Total:</strong> <span id="total">0.00€</span>
+      </div>
+
+      <button id="submit-order" class="submit-btn">Realizar pedido</button>
+    </section>
+  </main>
+
+  <!-- Modal de resumen de pedido -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Resumen del Pedido</h2>
+      <div id="modal-body"></div>
+      <div class="modal-buttons">
+        <button id="confirm-order" class="confirm-btn">Confirmar Pedido</button>
+        <button id="close-modal" class="close-btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de confirmación -->
+  <div id="success-modal" class="modal">
+    <div class="modal-content success">
+      <h2>Pedido confirmado</h2>
+      <p>¡Gracias por tu compra!</p>
+    </div>
+  </div>
+</body>
+<footer>Francisco Pérez Ruiz</footer>
+</html>
